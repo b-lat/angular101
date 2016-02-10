@@ -5,6 +5,9 @@ function EventController($scope) {
   $scope.snippet = '<span style="color:red">hi there</span>'
   $scope.buttonDisabled = true;
   $scope.sortorder = 'name';
+  $scope.getNumber = function(num) {
+    return new Array(num);
+  }
   $scope.event = {
     name: 'Angular Boot Camp',
     date: '1/1/2013',
@@ -20,7 +23,7 @@ function EventController($scope) {
         name: 'Directives Masterclass',
         creatorName: 'Bob Smith',
         duration: 1,
-        level: 'Advanced',
+        level: 3,
         abstract: 'In this session you will learn the ins and outs of directives!',
         upVoteCount: 0
       },
@@ -28,7 +31,7 @@ function EventController($scope) {
         name: 'Scopes for fun and profit',
         creatorName: 'John Doe',
         duration: 2,
-        level: 'Introductory',
+        level: 1,
         abstract: 'This session blah blah blah',
         upVoteCount: 0
       },
@@ -36,7 +39,7 @@ function EventController($scope) {
         name: 'Well Behaved Controllers',
         creatorName: 'Jane Doe',
         duration: 4,
-        level: 'Intermediate',
+        level: 2,
         abstract: 'Controllers are the beginning of everything Angular does...',
         upVoteCount: 0
       }

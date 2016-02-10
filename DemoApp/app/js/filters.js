@@ -14,3 +14,16 @@ eventsApp.filter('durations', function() {
     }
   }
 })
+
+eventsApp.filter('levels', function(){
+  return function(level) {
+    switch (level) {
+      case 1:
+      return "Introductory";
+      case 2:
+      return "Intermediate";
+      case 3:
+      return "Advanced";
+    }
+  }
+})

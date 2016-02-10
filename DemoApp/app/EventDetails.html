@@ -90,7 +90,7 @@
                 <span>Duration:
                   {{session.duration | durations}}</span><br/>
                 <span>Level:
-                  {{session.level}}</span>
+                  <i ng-repeat="i in getNumber(session.level) track by $index" class="icon-star"></i> ({{session.level | levels}})</span>
 
                 <p>{{session.abstract}}</p>
               </div>
