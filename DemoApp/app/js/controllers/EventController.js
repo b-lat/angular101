@@ -1,7 +1,7 @@
 "use strict";
 
 eventsApp.controller("EventController",
-function EventController($scope, eventData, $log) {
+function EventController($scope, eventData, $log, $routeParams) {
   $scope.snippet = '<span style="color:red">hi there</span>'
   $scope.buttonDisabled = true;
   $scope.sortorder = 'name';
@@ -17,7 +17,7 @@ function EventController($scope, eventData, $log) {
 
   // $scope.event = eventData.getEvent();
 
-  eventData.getEvent()
+  eventData.getEvent($routeParams.eventId)
   .$promise
   .then(function(event) { $scope.event = event; console.log(event); })
   .catch(function(response) {console.log(response);});
